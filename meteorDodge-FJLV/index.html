@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteor Dodge - FJLV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Contenedor principal del juego -->
+    <div class="game-container">
+        <h1 class="game-title">🚀 METEOR DODGE - FJLV 🌠</h1>
+        
+        <!-- Panel de información -->
+        <div class="info-panel">
+            <div class="score-display">
+                <span class="label">Puntaje:</span>
+                <span id="score" class="value">0</span>
+            </div>
+            <div class="level-display">
+                <span class="label">Nivel:</span>
+                <span id="level" class="value">1</span>
+            </div>
+            <div class="time-display">
+                <span class="label">Tiempo:</span>
+                <span id="time" class="value">0s</span>
+            </div>
+        </div>
+
+        <!-- Canvas donde se dibuja el juego -->
+        <canvas id="gameCanvas" width="600" height="700"></canvas>
+
+        <!-- Controles e instrucciones -->
+        <div class="controls">
+            <p class="instructions">
+                🎮 Usa las teclas <kbd>←</kbd> y <kbd>→</kbd> para mover la nave
+            </p>
+            <button id="startButton" class="btn btn-primary">Iniciar Juego</button>
+            <button id="restartButton" class="btn btn-secondary" style="display: none;">Reintentar</button>
+        </div>
+
+        <!-- Pantalla de Game Over (oculta inicialmente) -->
+        <div id="gameOverScreen" class="game-over-screen">
+            <div class="game-over-content">
+                <h2>💥 GAME OVER 💥</h2>
+                <p class="final-stats">
+                    <span class="stat-label">Puntaje Final:</span>
+                    <span id="finalScore" class="stat-value">0</span>
+                </p>
+                <p class="final-stats">
+                    <span class="stat-label">Tiempo Sobrevivido:</span>
+                    <span id="finalTime" class="stat-value">0s</span>
+                </p>
+                <p class="final-stats">
+                    <span class="stat-label">Nivel Alcanzado:</span>
+                    <span id="finalLevel" class="stat-value">1</span>
+                </p>
+                <button id="playAgainButton" class="btn btn-primary">Jugar de Nuevo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Créditos -->
+    <footer class="credits">
+        <p>Desarrollado como parte del curso AI4Devs | 2025</p>
+    </footer>
+
+    <!-- Script del juego -->
+    <script src="script.js"></script>
+</body>
+</html>
